@@ -10,7 +10,6 @@ import {
   Section,
 } from 'astro-boilerplate-components';
 
-import { CTA } from '@/partials/CTA';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
@@ -24,7 +23,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const sortedPosts = sortByDate(allPosts);
 
   // Return a paginated collection of paths for all posts
-  return paginate(sortedPosts, { pageSize: 6 });
+  return paginate(sortedPosts, { pageSize: 12 });
 }
 
 interface Props {
@@ -42,8 +41,8 @@ const description =
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title='Random title here'
-      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      title='Blog Posts'
+      description=''
     />
   </Section>
 
@@ -55,5 +54,4 @@ const description =
     <NewerOlderPagination page={page} />
   </Section>
 
-  <CTA />
 </Base>

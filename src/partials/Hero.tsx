@@ -10,20 +10,19 @@ const Hero = () => (
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          <GradientText>NonGC</GradientText> Blog
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          A blog dedicated to languages without a garbage collector. {' '}
+          <a className="text-cyan-400 hover:underline" href="https://github.com/NonGC/nongc.github.io">
+            Contribute
+          </a> with your post.
+          Check out our {' '}
+          <a className="text-cyan-400 hover:underline" href="https://github.com/NonGC">
+            community
+          </a>{' '}.
         </>
       }
       avatar={
