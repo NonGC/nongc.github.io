@@ -1,10 +1,32 @@
 ---
 layout: '@/templates/BasePost.astro'
-title: Hello Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-01-01T00:00:00Z
-imgSrc: '/assets/images/image-post6.jpeg'
-imgAlt: 'Image post 6'
+title: Hello, World!
+description: First blog post
+pubDate: 2022-11-12T07:51:00Z
+imgSrc: '/assets/images/image-post.jpeg'
+imgAlt: 'Image post'
+author: 'Luiz Chagas Jardim'
 ---
 
-Full typography example at [this page](./sixth-post).
+# Hello, World!
+
+Test post with hello-world in two languages.
+
+## C++
+
+```cpp
+#include <iostream>
+
+int main() {
+  std::cout << "Hello, World!\n";
+  return 0;
+}
+```
+
+## Rust
+
+```rust
+pub fn main() {
+    println!("Hello, World!");
+}
+```
