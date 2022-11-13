@@ -1,17 +1,28 @@
 import type { ReactNode } from 'react';
 
-type IProps = {
-  title?: ReactNode;
-  children: ReactNode;
+type IOptionProps = {
+  value: string;
+  text: string;
 };
 
-const ComboBox = (props: IProps) => (
-  <div className="mx-auto max-w-screen-lg px-3 py-6">
-    {props.title && (
-      <div className="mb-6 text-2xl font-bold">{props.title}</div>
-    )}
+const Option = (props: IOptionProps) => (
+  <option value={props.value}>{props.text}</option>
+);
 
-    {props.children}
+type IComboboxProps = {
+  text: string;
+  unique_label: string;
+  options: IOptionProps[];
+};
+
+const ComboBox = (props: IComboboxProps) => (
+  <div>
+    <label htmlFor={props.unique_label}>{props.text} </label>
+    <select name={props.unique_label} id={props.unique_label}>
+      {props.options.map((option) => (
+        <Option {...option} />
+      ))}
+    </select>
   </div>
 );
 
